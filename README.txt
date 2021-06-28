@@ -16,7 +16,8 @@ Increment through tags
 	without my new patch. Normally, you'd just have to click on it.)
 
 change the volume
-	MODKEY+SHIFT+E increases volume (+)
-	MODKEY+SHIFT+R decreases volume (-)
+	MODKEY+F11 increases volume (+)
+	MODKEY+F10 decreases volume (-)
+	MODKEY+F9  toggles mute (0)
 
 The bar is on the bottom, similar to Windows or MacOS (and DEs like Xfce & all that)
