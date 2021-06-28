@@ -19,7 +19,7 @@ static const char *colors[][3]      = {
 };
 
 /* tagging */
-static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
+static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" };
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -62,6 +62,7 @@ static const char *webbrowser[] = { "firefox", NULL };
 static const char *volup[] = { "/usr/bin/pactl", "set-sink-volume", "0", "+5%", NULL  };
 static const char *voldown[] = { "/usr/bin/pactl", "set-sink-volume", "0", "-5%", NULL  };
 
+#include "shiftview.c"
 static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
@@ -81,6 +82,11 @@ static Key keys[] = {
 	{ MODKEY,                       XK_Return, zoom,           {0} },
 	{ MODKEY,                       XK_Tab,    view,           {0} },
 	{ MODKEY|ShiftMask,             XK_c,      killclient,     {0} },
+	// Shiftview
+	{ MODKEY|ShiftMask,		XK_x, 	   shiftview,      { .i = +1 } },
+	{ MODKEY|ShiftMask,		XK_z,      shiftview, 	   { .i = -1 } },
+	// End Shiftview	
+
 	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
 	{ MODKEY,                       XK_f,      setlayout,      {.v = &layouts[1]} },
 	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[2]} },
