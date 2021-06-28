@@ -8,6 +8,13 @@ Modkey for dwm: WINDOWS_KEY
 
 fun features for dwm:
 
+Increment through tags
+	Instead of using MODKEY+Tag#, you can navigate through them with:
+	MODKEY+SHIFT+Z goes backwards in the tags
+	MODKEY+SHIFT+X goes forwards in the tags
+	Note: To prove that this is better, I added a 10th tag (which is impossible to navigate to
+	without my new patch. Normally, you'd just have to click on it.)
+
 change the volume
 	MODKEY+SHIFT+E increases volume (+)
 	MODKEY+SHIFT+R decreases volume (-)
