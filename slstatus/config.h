@@ -68,7 +68,8 @@ static const struct arg args[] = {
 	{ datetime, "%s ",           "%F %T" },
 	{ cpu_perc, "[  %s%] ", NULL },
 	{ ram_perc, "[  %s%] ", NULL },
-	{ run_command, "[: %4s]", "pactl list sinks | grep '^[[:space:]]Volume:' | \\
+	{ run_command, "[: %4s] ", "pactl list sinks | grep '^[[:space:]]Volume:' | \\
 		    head -n $(( $SINK + 1 )) | tail -n 1 | sed -e 's,.* \\([0-9][0-9]*\\)%.*,\\1,'" },
+	{ battery_perc, "[  %s]", "BAT0" },
 
 }; 

@@ -1,12 +1,14 @@
 /* See LICENSE file for copyright and license details. */
 
+#include <X11/XF86keysym.h> // for brightness
+
 /* appearance */
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 0;        /* 0 means bottom bar */
-static const char *fonts[]          = { "monospace:size=10", "fontawesome:size=10" };
-static const char dmenufont[]       = "monospace:size=10";
+static const char *fonts[]          = { "monospace:size=14", "fontawesome:size=14" };
+static const char dmenufont[]       = "monospace:size=18";
 static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#2f0606";
 static const char col_gray3[]       = "#bbbbbb";
@@ -64,6 +66,8 @@ static const char *webbrowser[] = { "firefox", NULL };
 static const char *volup[] = { "/usr/bin/pactl", "set-sink-volume", "0", "+5%", NULL  };
 static const char *voldown[] = { "/usr/bin/pactl", "set-sink-volume", "0", "-5%", NULL  };
 static const char *voltog[] = { "/usr/bin/pactl", "set-sink-mute", "0", "toggle", NULL };
+static const char *briup[] = { "brightnessctl", "set", "10%+", NULL  };
+static const char *bridown[] = { "brightnessctl", "set", "10%-", NULL  };
 
 #include "shiftview.c"
 static Key keys[] = {
@@ -72,10 +76,14 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY|ShiftMask,		XK_f,      spawn,	   {.v = webbrowser } },
 	// -- volume sect --
-	{ MODKEY,			XK_F11,	   spawn,	   {.v = volup } }, // UP
-	{ MODKEY, 			XK_F10,	   spawn,	   {.v = voldown } }, // DOWN
-	{ MODKEY, 			XK_F9,     spawn, 	   {.v = voltog } },  // MUTE-TOGGLE
+	{ MODKEY,			XK_F9,	   spawn,	   {.v = volup } }, // UP
+	{ MODKEY, 			XK_F8,	   spawn,	   {.v = voldown } }, // DOWN
+	{ MODKEY, 			XK_F7,     spawn, 	   {.v = voltog } },  // MUTE-TOGGLE
 	// -- end of volume sect --
+	// -- brightness sect --
+	{ MODKEY,			XK_F5,	   spawn,	   {.v = bridown } },
+	{ MODKEY, 			XK_F6,	   spawn,	   {.v = briup } },
+	// -- end of brightness sect --
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },

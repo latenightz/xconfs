@@ -4,6 +4,8 @@ Note: due to a little glitch, /slstatus/ was labeled under my dwm update. Nothin
 
 Xconfs: Free to use configurations!
 
+(This also contains configs for things like Vim, so it's basically the Linux starter pack)
+
 Modkey for dwm: WINDOWS_KEY
 
 fun features for dwm:
