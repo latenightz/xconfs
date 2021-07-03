@@ -1,25 +1,19 @@
-Note: due to a little glitch, /slstatus/ was labeled under my dwm update. Nothing big changed with the slstatus, just that I removed and added a few things.
+README.txt has been revamped for ease-of-use.
 
 
 
-Xconfs: Free to use configurations!
+==== CONTROLS ====
 
-(This also contains configs for things like Vim, so it's basically the Linux starter pack)
+Modkey = Windows Key
 
-Modkey for dwm: WINDOWS_KEY
+volume controls:
+	MOD+F11 (+)
+	MOD+F10 (-)
+	MOD+F9  (M)
 
-fun features for dwm:
+move through the tags*
+	MOD+SHIFT+X (+)
+	MOD+SHIFT+Z (-)
 
-Increment through tags
-	Instead of using MODKEY+Tag#, you can navigate through them with:
-	MODKEY+SHIFT+Z goes backwards in the tags
-	MODKEY+SHIFT+X goes forwards in the tags
-	Note: To prove that this is better, I added a 10th tag (which is impossible to navigate to
-	without my new patch. Normally, you'd just have to click on it.)
-
-change the volume
-	MODKEY+F11 increases volume (+)
-	MODKEY+F10 decreases volume (-)
-	MODKEY+F9  toggles mute (0)
-
-The bar is on the bottom, similar to Windows or MacOS (and DEs like Xfce & all that)
+*Loops around, meaning if you're on #1,
+ you can go backwards and get to #10
