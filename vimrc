@@ -47,6 +47,7 @@ nnoremap <C-N> :tabnew<CR>
 " file I/O/Q
 nnoremap <C-W> :w<CR>
 nnoremap <C-Q> :q<CR>
+nnoremap <C-E> :q!<CR>
 nnoremap <C-F> /
 
 " v/h/splits
