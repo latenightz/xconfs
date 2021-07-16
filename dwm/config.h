@@ -9,11 +9,11 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 0;        /* 0 means bottom bar */
 static const char *fonts[]          = { "iosevka:size=14", "fontawesome:size=14" };
 static const char dmenufont[]       = "freemono:size=18";
-static const char col_gray1[]       = "#222222";
+static const char col_gray1[]       = "#000000";
 static const char col_gray2[]       = "#2f0606";
 static const char col_gray3[]       = "#bbbbbb";
 static const char col_gray4[]       = "#ffffff";
-static const char col_cyan[]        = "#06a829";
+static const char col_cyan[]        = "#1c1ebc";
 static const char def_terminal[]    = "alacritty"; // Default terminal defined here!
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
