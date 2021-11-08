@@ -1,7 +1,4 @@
-README.txt has been revamped for ease-of-use.
-
-note: I will add all the bindings here, at some point.
-
+Note: Volume controls + slstatus use Pulseaudio. I will add some configurations for Pipewire in the future.
 
 
 ==== CONTROLS ====
